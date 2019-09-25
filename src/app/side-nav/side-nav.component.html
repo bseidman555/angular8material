@@ -1,3 +1,5 @@
+
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -25,5 +27,10 @@
     <router-outlet></router-outlet>
     <div>where am i</div> 
     <div>this is another div </div>
+    <ul>
+        <li *ngFor="let post of posts">
+          {{ post.title }}
+        </li>
+      </ul>
   </mat-sidenav-content>
 </mat-sidenav-container>
